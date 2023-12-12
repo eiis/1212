@@ -20,6 +20,7 @@ const RedPacketList: React.FC<Props> = ({ packets }) => {
       {packets.map((packet, index) => (
         <RedPacketItem key={index} packet={packet} />
       ))}
+      {/* <img src='/bg.png' alt="" /> */}
     </div>
   );
 };

@@ -14,15 +14,15 @@ type Props = {
 };
 
 interface CountDown {
-  hours: number;
-  minutes: number;
-  remainingSeconds: number;
+  hours: number | string;
+  minutes: number | string;
+  remainingSeconds: number | string;
 }
 
 const formatCountdown = (seconds: number): CountDown => {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainingSeconds = seconds % 60;
+  const hours = Math.floor(seconds / 3600) < 10 ? `0${Math.floor(seconds / 3600)}` : Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60)  < 10 ? `0${Math.floor((seconds % 3600) / 60)}` : Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60  < 10 ? `0${seconds % 60}` : seconds % 60;
   return{
     hours,
     minutes,
@@ -70,7 +70,7 @@ const RedPacketItem: React.FC<Props> = ({ packet }) => {
 
   // bg-red-packet
   return (
-    <div className="px-2 rounded-lg box-content flex items-center justify-between min-h-[100px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url('/bg.png')`}}>
+    <div className="px-2 rounded-xl box-content flex items-center justify-between min-h-[100px] bg-center bg-no-repeat" style={{backgroundImage: `url('/bg.png')`,backgroundSize:'100% 100%'}}>
       <div className='flex flex-shrink-0 xs:min-w-[100px] min-w-[80px] justify-center items-center text-[#A45927]'>
         <span className="text-3xl font-bold">{money}</span>
         <span className="text-sm self-end pb-1">元</span>
@@ -86,9 +86,9 @@ const RedPacketItem: React.FC<Props> = ({ packet }) => {
             <p>距结束:</p>
           <div className={countdownStyle}>
             <p className={cutStyle}>{`${countdown.hours}`}</p>
-            <p className='flex items-center text-[#FFE9B0]'>:</p>
+            <p className='flex items-center text-[##FFEDBE]'>:</p>
             <p className={cutStyle}>{`${countdown.minutes}`}</p>
-            <p className='flex items-center text-[#FFE9'>:</p>
+            <p className='flex items-center text-[#FFEDBE'>:</p>
             <p className={cutStyle}>{`${countdown.remainingSeconds}`}</p>
           </div>
           </div>
