@@ -1,14 +1,7 @@
 import React from 'react';
 import RedPacketItem from './RedPacketItem';
+import type {RedPacket} from '../types/RedPacket'
 
-interface RedPacket{
-  money: number;
-  title: string;
-  description: string;
-  time: number[];
-  status: string;
-  restTime?: number;
-}
 
 type Props = {
   packets: RedPacket[];
@@ -20,7 +13,6 @@ const RedPacketList: React.FC<Props> = ({ packets }) => {
       {packets.map((packet, index) => (
         <RedPacketItem key={index} packet={packet} />
       ))}
-      {/* <img src='/bg.png' alt="" /> */}
     </div>
   );
 };

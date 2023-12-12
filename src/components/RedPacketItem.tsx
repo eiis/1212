@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-interface RedPacket{
-  money: number;
-  title: string;
-  description: string;
-  time: number[];
-  status: string;
-  restTime?: number;
-}
+import type {RedPacket} from '../types/RedPacket'
 
 type Props = {
   packet: RedPacket;

@@ -1,15 +1,8 @@
 import React from 'react';
 import RedPacketList from './components/RedPacketList';
 import list from './utils/1352.json'
+import type {RedPacket} from './types/RedPacket'
 
-interface RedPacket{
-  money: number;
-  title: string;
-  description: string;
-  time: number[];
-  status: string;
-  restTime?: number;
-}
 
 const App: React.FC = () => {
   const packetData: RedPacket[] = list.list;
