@@ -10,7 +10,7 @@ export default {
         'red-packet': "url('./public/bg.png')",
       },
       screens: {
-        'xs': '375px',  // 添加375px宽的断点
+        'xs': '376px',  // 添加375px宽的断点
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
