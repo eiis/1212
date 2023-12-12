@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'red-packet': "url('./src/assets/image/bg.png')",
+        'red-packet': "url('./public/bg.png')",
       },
       screens: {
         'xs': '375px',  // 添加375px宽的断点

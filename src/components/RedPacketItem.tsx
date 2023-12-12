@@ -56,7 +56,7 @@ const RedPacketItem: React.FC<Props> = ({ packet }) => {
 
   // bg-red-packet
   return (
-    <div className="rounded-lg px-4 flex items-center justify-between bg-red-packet min-h-[100px] bg-cover bg-center bg-no-repeat">
+    <div className="rounded-lg px-4 flex items-center justify-between min-h-[100px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url('/bg.png')`}}>
       <div className='flex flex-shrink-0 xs:min-w-[100px] min-w-[80px] justify-center items-center text-[#A45927]'>
         <span className="text-3xl font-bold">{money}</span>
         <span className="text-sm self-end pb-1">元</span>
