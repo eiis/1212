@@ -68,7 +68,6 @@ const RedPacketItem: React.FC<Props> = ({ packet }) => {
     return () => clearInterval(timer);
   }, [restTime]);
 
-  // bg-red-packet
   return (
     <div className="px-2 rounded-xl box-content flex items-center justify-between min-h-[100px] bg-center bg-no-repeat" style={{backgroundImage: `url('/bg.png')`,backgroundSize:'100% 100%'}}>
       <div className='flex flex-shrink-0 xs:min-w-[100px] min-w-[80px] justify-center items-center text-[#A45927]'>
@@ -97,11 +96,9 @@ const RedPacketItem: React.FC<Props> = ({ packet }) => {
         )}
         </div>
       </div>
-      {/* <div className='min-w-[80px] flex items-center justify-center bg-[#FFE9B0] rounded-full'> */}
       <button className="text-4 flex-shrink-0 xs:min-w-[80px] min-w-[60px] text-[#A45927]  bg-[#FFE9B0] font-bold rounded-full py-2">
         {status}
       </button>
-      {/* </div> */}
     </div>
   );
 };
